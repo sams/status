@@ -16,7 +16,11 @@ class StatusController extends StatusAppController {
 	var $helpers = array('Javascript', 'Time');
 	var $components = array('RequestHandler');
 
-	function index() {
+	function beforeFilter() {
+		parent::beforeFilter();
+	}
+	
+	function admin_index() {
 		$panels = array();
 		foreach(Configure::read('Status.panels') as $panel => $options) {
 
@@ -44,5 +48,15 @@ class StatusController extends StatusAppController {
 		}
 
 		$this->set('panels', $panels);
+		$this->layout = 'status';
+		$this->render('admin_index');
+	}
+        
+	public function render($action = null, $layout = null, $file = null) {
+		if (file_exists(VIEWS . 'status' . DS . $this->action . '.ctp')) {
+			$file = VIEWS . DS. 'status' . DS . $this->action . '.ctp';
+		}
+		//$this->set('viewWas', VIEWS . 'themed' . DS . 'admin' .   DS. 'status' . DS . $this->action . '.ctp');
+		return parent::render($action, $layout, $file);
 	}
 }
