@@ -1,8 +1,8 @@
 <h2>Last Updated: <?php echo $time->timeAgoInWords($updated) ?></h2>
 <table>
 	<tr>
-		<th><?php __('When') ?></th>
-		<th><?php __('Visits') ?></th>
+		<th><?php echo __('When') ?></th>
+		<th><?php echo __('Visits') ?></th>
 	</tr>
 	<?php
 		foreach($data as $when => $count) {

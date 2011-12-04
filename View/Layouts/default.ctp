@@ -27,7 +27,7 @@
 <head>
 	<?php echo $this->Html->charset(); ?>
 	<title>
-		<?php __('CakePHP: Status Dashboard'); ?>
+		<?php echo __('CakePHP: Status Dashboard'); ?>
 	</title>
 	<?php
 		echo $this->Html->meta('icon');

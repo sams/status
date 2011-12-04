@@ -2,7 +2,7 @@
 	$data = $this->requestAction(array('plugin' => 'status', 'controller' => 'panels', 'action' => 'system'));
 ?>
 
-<h1><?php __('System Info') ?></h1>
+<h1><?php echo __('System Info') ?></h1>
 <?php if(!empty($data['uptime'])) { ?>
   <div>
 	  <h2>Uptime</h2>

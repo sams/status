@@ -4,11 +4,11 @@
 	$key = sprintf('status-logs-%s-detail', preg_replace("/[^a-zA-Z0-9]/", '', $options));
 ?>
 
-<h1><?php echo $options . ' ' . __(' Log', true) ?></h1>
+<h1><?php echo $options . ' ' . __(' Log') ?></h1>
 <table>
 	<tr>
-		<th><?php __('When') ?></th>
-		<th><?php __('Entry') ?></th>
+		<th><?php echo __('When') ?></th>
+		<th><?php echo __('Entry') ?></th>
 	</tr>
 	<?php if(!empty($data)) { ?>
 		<?php foreach($data as $i => $row) { ?>

@@ -53,10 +53,10 @@ class StatusController extends StatusAppController {
 	}
         
 	public function render($action = null, $layout = null, $file = null) {
-		if (file_exists(VIEWS . 'status' . DS . $this->action . '.ctp')) {
-			$file = VIEWS . DS. 'status' . DS . $this->action . '.ctp';
+		if (file_exists(APP . 'View' . DS . 'status' . DS . $this->request->action . '.ctp')) {
+			$file = APP . 'View' . DS . DS. 'status' . DS . $this->request->action . '.ctp';
 		}
-		//$this->set('viewWas', VIEWS . 'themed' . DS . 'admin' .   DS. 'status' . DS . $this->action . '.ctp');
+		//$this->set('viewWas', APP . 'View' . DS . 'themed' . DS . 'admin' .   DS. 'status' . DS . $this->request->action . '.ctp');
 		return parent::render($action, $layout, $file);
 	}
 }

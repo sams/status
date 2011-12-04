@@ -3,7 +3,7 @@
 ?>
 
 <div>
-	<h1><?php __('Unit Tests') ?></h1>
+	<h1><?php echo __('Unit Tests') ?></h1>
 	<?php
 		if(empty($tests['cases'])) {
 			__('No test cases found.');	

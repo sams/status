@@ -49,7 +49,7 @@ class GoogleAnalyticsSource extends DataSource {
 	}
 
 	function close() {
-		if (Configure::read() > 1) {
+		if (Configure::read('debug') > 1) {
 			//$this->showLog();
 		}
 

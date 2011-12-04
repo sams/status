@@ -41,7 +41,7 @@ class PanelsController extends StatusAppController {
 	}
 
 	function logs() {
-		$logfile = $this->params['log'];
+		$logfile = $this->request->params['log'];
 		if (strpos($logfile, '.') === false) {
 			$logfile .= '.log';
 		}
@@ -75,8 +75,8 @@ class PanelsController extends StatusAppController {
 	}
 	
 	function tests_run() {
-		if(!empty($this->params['url']['case'])) {
-			$case = $this->params['url']['case'];
+		if(!empty($this->request->params['url']['case'])) {
+			$case = $this->request->params['url']['case'];
 			
 			if(stripos($_ENV['OS'], 'windows') !== false) {
 				$cmd = 'cake.bat';
