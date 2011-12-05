@@ -9,6 +9,7 @@
  * @license     MIT
  *
  */
+App::uses('StatusAppController', 'Status.Controller');
  
 class PanelsController extends StatusAppController {
 	var $name = 'Panels';

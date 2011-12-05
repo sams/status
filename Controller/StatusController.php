@@ -9,6 +9,7 @@
  * @license     MIT
  *
  */
+App::uses('StatusAppController', 'Status.Controller');
  
 class StatusController extends StatusAppController {
 	var $name = 'Status';
@@ -42,8 +43,8 @@ class StatusController extends StatusAppController {
 
 			foreach($options as $option) {
 				$panels[] = array('plugin' => $plugin,
-													'element' => $panel,
-													'options' => $option);
+						'element' => $panel,
+						'options' => $option);
 			}
 		}
 
@@ -53,8 +54,8 @@ class StatusController extends StatusAppController {
 	}
         
 	public function render($action = null, $layout = null, $file = null) {
-		if (file_exists(APP . 'View' . DS . 'status' . DS . $this->request->action . '.ctp')) {
-			$file = APP . 'View' . DS . DS. 'status' . DS . $this->request->action . '.ctp';
+		if (file_exists(APP . 'View' . DS . 'Status' . DS . $this->request->action . '.ctp')) {
+			$file = APP . 'View' . DS. 'Status' . DS . $this->request->action . '.ctp';
 		}
 		//$this->set('viewWas', APP . 'View' . DS . 'themed' . DS . 'admin' .   DS. 'status' . DS . $this->request->action . '.ctp');
 		return parent::render($action, $layout, $file);
